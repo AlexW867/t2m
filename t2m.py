@@ -41,5 +41,8 @@ args = parser.parse_args()
 get_voice(args.text)
 if args.speed != 1.0:
     speed_proc(args.speed)
-if args.quiet == False:
-    play_mp3('output_%.1fx.mp3' % args.speed)
+    if args.quiet == False:
+        play_mp3('output_%.1fx.mp3' % args.speed)
+else:
+    if args.quiet == False:
+        play_mp3('output.mp3')
